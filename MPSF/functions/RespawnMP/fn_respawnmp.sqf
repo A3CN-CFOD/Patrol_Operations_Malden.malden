@@ -553,7 +553,7 @@ switch (_mode) do {
 		["closeUI"] call MPSF_fnc_respawnMP;
 
 		SETRESPAWNPOS(nil);
-		setPlayerRespawnTime 1e9;
+		setPlayerRespawnTime 15;
 	};
 	case "onRedeploy" : {
 		_params params [["_units",[],[[]]],["_position",objNull,[objNull,"",[]]],["_instant",false,[false]]];
@@ -708,12 +708,12 @@ switch (_mode) do {
 				_respawnTimer = 0 + _respawnTimer - MISSIONTIME % _respawnTimer;
 			};
 			case (["getCfgEnable",[_respawnType,"Trigger",side group player]] call MPSF_fnc_respawnMP) : {
-				_respawnTimer = 1e9;
+				_respawnTimer = 15;
 			};
 		};
 		_respawnTimer = MISSIONTIME + _respawnTimer;
 		SETRESPAWNTIMER(_respawnTimer);
-		if (isMultiplayer) then { setPlayerRespawnTime 1e9; };
+		if (isMultiplayer) then { setPlayerRespawnTime 15; };
 		true;
 	};
 	case "getRespawnTimer" : {

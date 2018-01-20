@@ -131,11 +131,11 @@ class CfgRespawnMP {
 	MHQvehicles[] = {
 		"B_Truck_01_box_F","B_MRAP_01_F"
 		,"O_Truck_03_repair_F","O_MRAP_02_F"
-		,"I_Truck_02_box_F","I_MRAP_03_F"
+		,"I_Truck_02_box_F","I_MRAP_03_F","rhsusf_M1078A1P2_B_D_CP_fmtv_usarmy","rhsusf_M1078A1P2_B_WD_CP_fmtv_usarmy"
 	};
 	class west {
 		respawn[] = {"Base","Group","Rallypoint","Countdown"}; // ,"Wave","Spectator","Trigger"
-		respawnTimer = 120;
+		respawnTimer = 15;
 		redeploy[] = {"Base","Group","Halo","Rallypoint"};
 		redeployVehicles[] = {"Base","Halo"};
 		redeployDelay = 10;

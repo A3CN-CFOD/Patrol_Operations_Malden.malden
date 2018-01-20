@@ -1,4 +1,4 @@
-mpsf_ui_key = "User1";
+mpsf_ui_key = "User2";
 mpsf_bodybags = 1;
 mpsf_bodysearch = 1;
 
