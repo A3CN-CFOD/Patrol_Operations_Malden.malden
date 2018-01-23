@@ -8,7 +8,7 @@ class EditorData
 	toggles=101;
 	class ItemIDProvider
 	{
-		nextID=3394;
+		nextID=3427;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=508;
+		nextID=517;
 	};
 	class Camera
 	{
-		pos[]={8073.8989,69.179665,10055.02};
-		dir[]={0.50729918,-0.83169013,-0.22621886};
-		up[]={0.75954729,0.55527705,-0.33870119};
-		aside[]={-0.40730923,-4.1564199e-006,-0.91341132};
+		pos[]={8045.3838,75.214424,10091.994};
+		dir[]={0.92419881,-0.37493759,-0.074371636};
+		up[]={0.37379706,0.92698789,-0.030077018};
+		aside[]={-0.080208927,-3.5812263e-008,-0.9968794};
 	};
 };
 binarizationWanted=0;
@@ -75,13 +75,14 @@ addons[]=
 	"CUP_CAStructures_PMC_FuelStation",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_rearm",
-	"ace_dragging"
+	"ace_dragging",
+	"acex_fortify"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -271,6 +272,13 @@ class AddonsMetaData
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item28
+		{
+			className="acex_fortify";
+			name="acex_fortify";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
@@ -16074,7 +16082,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=69;
+		items=70;
 		class Item0
 		{
 			dataType="Marker";
@@ -16195,7 +16203,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8140.4995,28.997612,10097.125};
-				angles[]={-0,0,6.271987};
+				angles[]={0,0,6.271987};
 			};
 			name="PO4_Module_Armoury_F_2";
 			init="[this] call MPSF_fnc_createLoadoutPoint;";
@@ -17631,7 +17639,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8279.25,29.252275,10016.5};
-						angles[]={-0,4.9218297,6.282495};
+						angles[]={0,4.9218297,6.282495};
 					};
 					side="Empty";
 					flags=4;
@@ -18927,7 +18935,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8183.6479,29.023191,10024.664};
-						angles[]={-0,5.7072268,0};
+						angles[]={0,5.7072268,0};
 					};
 					side="Empty";
 					flags=4;
@@ -21689,7 +21697,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8114.1426,30.245674,10082.399};
-						angles[]={-0,0.43258047,0};
+						angles[]={0,0.43258047,0};
 					};
 					side="Empty";
 					class Attributes
@@ -26157,6 +26165,96 @@ class Mission
 					};
 				};
 				nAttributes=5;
+			};
+		};
+		class Item69
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8159.6172,28.889999,10039.537};
+			};
+			id=3394;
+			type="acex_fortify_setupModule";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acex_fortify_setupModule_AddToolItem";
+					expression="_this setVariable ['AddToolItem',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acex_fortify_setupModule_Budget";
+					expression="_this setVariable ['Budget',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=-1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="acex_fortify_setupModule_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="acex_fortify_setupModule_Preset";
+					expression="_this setVariable ['Preset',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=4;
 			};
 		};
 	};
